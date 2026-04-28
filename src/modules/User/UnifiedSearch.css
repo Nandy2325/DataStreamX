@@ -1,0 +1,211 @@
+.unifiedsearch-module {
+  background: #000;
+  color: #fff;
+  font-family: "Segoe UI", sans-serif;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.unifiedsearch-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  gap: 12px;
+}
+
+.unifiedsearch-header img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.unifiedsearch-header span {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #9b5de5;
+}
+
+.unifiedsearch-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.unifiedsearch-bar input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  background: #121212;
+  color: white;
+  font-size: 16px;
+}
+
+.unifiedsearch-bar input::placeholder {
+  color: #888;
+}
+
+.unifiedsearch-bar button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  background: #333;
+  color: white;
+  transition: background 0.3s;
+}
+
+.unifiedsearch-bar button:hover {
+  background: #9b5de5;
+}
+
+.unifiedsearch-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.unifiedsearch-card {
+  background: #121212;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.unifiedsearch-card:hover {
+  background: #1a1225;
+  border: 1px solid #9b5de5;
+}
+
+.unifiedsearch-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.unifiedsearch-card h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.unifiedsearch-card p {
+  margin: 0;
+  font-size: 12px;
+  color: #aaa;
+}
+/* ================= COMPACT SEARCH ================= */
+
+.unifiedsearch-compact {
+  position: relative;   /* ✅ anchor child dropdown */
+  display: inline-block;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.compact-search-bar {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.compact-search-bar input {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  width: 180px; /* small width for dashboard top bar */
+}
+
+.compact-search-bar input::placeholder {
+  color: #888;
+}
+
+.compact-search-bar button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.compact-search-bar button:hover {
+  background: #9b5de5;
+}
+
+/* Compact results dropdown */
+.compact-results {
+  position: absolute;
+  top: 100%;            /* ✅ directly below the search bar */
+  left: 0;
+  background: #121212;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px;
+  width: 100%;          /* ✅ match search bar width */
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 100;
+  margin-top: 4px;      /* small gap below input */
+}
+
+.compact-result-card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.compact-result-card:hover {
+  background: #1a1225;
+}
+
+.compact-result-card img {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.compact-result-card p {
+  margin: 0;
+  font-size: 13px;
+  color: #ddd;
+}
+
+/* .unifiedsearch-results,
+.compact-results {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.unifiedsearch-results.hide,
+.compact-results.hide {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+/* .compact-results,
+.unifiedsearch-results {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.compact-results.hide,
+.unifiedsearch-results.hide {
+  opacity: 0;
+  pointer-events: none;
+} */
+

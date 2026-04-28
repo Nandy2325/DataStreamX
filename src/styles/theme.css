@@ -1,0 +1,91 @@
+/* 🌌 Background & Layout */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #000000; /* pure black */
+  color: #ffffff;      /* default text color */
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  background: #121212; /* dark gray panel */
+  padding: 32px;       /* more breathing room */
+  border-radius: 12px;
+  border: 1px solid #2c2c2c; /* subtle outline */
+  box-shadow: 0 0 20px #a259ff; /* stronger neon glow */
+  max-width: 600px;    /* wider on desktop */
+  width: 90%;          /* responsive: fills most of screen on mobile */
+  margin: 60px auto;   /* more vertical spacing */
+}
+
+/* ⚪ Text Colors */
+h2, .title {
+  color: #ffffff; /* primary text */
+  text-align: center;
+}
+
+label {
+  color: #cccccc; /* secondary text */
+}
+
+.muted {
+  color: #888888; /* muted text */
+}
+
+/* 🔘 Buttons & UI Elements */
+.btn {
+  background: #9b5de5; /* neon purple */
+  color: #ffffff;      /* button text */
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #c77dff; /* hover accent */
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2c2c2c;
+  border-radius: 4px;
+  background: #000000; /* pure black input */
+  color: #ffffff;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #a259ff; /* neon border on focus */
+  box-shadow: 0 0 10px #a259ff;
+}
+
+/* Links */
+.login-link, .forgot-link {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.login-link a, .forgot-link a {
+  color: #c77dff;
+  text-decoration: none;
+}
+
+.login-link a:hover, .forgot-link a:hover {
+  text-decoration: underline;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 10px auto 20px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;   /* round logo */
+  object-fit: cover;    /* crop nicely */
+  box-shadow: 0 0 10px #a259ff; /* neon glow */
+}

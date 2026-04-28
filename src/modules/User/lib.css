@@ -1,0 +1,8 @@
+.library-container {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    display: flex;
+    height: 100vh;
+}
+

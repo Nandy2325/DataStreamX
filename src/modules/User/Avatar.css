@@ -1,0 +1,153 @@
+/* --- Desktop Overlay --- */
+.avatar-page-wrapper {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85); /* Darker for better focus */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000; /* High z-index to stay above everything */
+  backdrop-filter: blur(4px); /* Modern glass effect */
+}
+
+/* --- Main Modal Container --- */
+.avatar-container {
+  background: #111;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(155, 93, 229, 0.4); /* DataStream Purple Glow */
+  max-width: 450px;
+  width: 90%;
+  border: 1px solid #333;
+}
+
+.avatar-title {
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+/* --- Form Elements --- */
+.style-selector {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.style-selector label {
+  display: block;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.style-selector input,
+.style-selector select {
+  width: 100%;
+  padding: 12px;
+  background: #1a1a1a;
+  border: 1px solid #444;
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.style-selector input:focus {
+  border-color: #9b5de5; /* Focus Purple */
+}
+
+/* --- Animation & Dice --- */
+.dice-animation {
+  padding: 20px;
+  color: #9b5de5;
+}
+
+.dice-spinner {
+  font-size: 3rem;
+  animation: roll 0.6s infinite linear;
+  display: inline-block;
+}
+
+@keyframes roll {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* --- Preview Area --- */
+.avatar-preview {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar-main, .avatar-option.selected {
+  width: 140px;
+  height: 140px;
+  background: #222;
+  border-radius: 50%;
+  padding: 10px;
+  border: 3px solid #9b5de5;
+}
+
+/* --- Buttons --- */
+.randomize button, .confirm-btn {
+  background: #9b5de5;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.randomize button:hover, .confirm-btn:hover {
+  background: #8338ec;
+  transform: translateY(-2px);
+}
+
+.close-btn {
+  background: transparent;
+  color: #666;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+}
+
+/* --- ✅ MOBILE VIEW (Side Panel Style) --- */
+@media (max-width: 768px) {
+  .avatar-page-wrapper {
+    justify-content: flex-end; /* Slide in from right */
+    align-items: stretch;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .avatar-container {
+    width: 280px; /* Acts like a sidebar on mobile */
+    height: 100vh;
+    border-radius: 0;
+    max-width: 100%;
+    padding: 1.5rem;
+    overflow-y: auto;
+    border-left: 2px solid #9b5de5;
+  }
+
+  .avatar-main, .avatar-option.selected {
+    width: 100px;
+    height: 100px;
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
