@@ -25,3 +25,16 @@ dist/
 # Environment files
 .env
 .env.local
+
+# Backend build output
+target/
+
+# Frontend assets
+src/assets/
+
+# Node modules
+node_modules/
+
+# Environment files
+.env
+.env.local
